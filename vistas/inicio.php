@@ -16,15 +16,54 @@ if (isset($_SESSION['usuario'])) {
     </head>
 
     <body>
+        <?php
+        require_once "../clases/Conexion.php";
+
+        $obj = new conectar();
+        $conexion = $obj->conexion();
+
+        $sql = "SELECT art.id_producto, art.id_categoria, cat.nombreCategoria, art.nombre, art.descripcion, art.stock_final, art.precio, art.ruta from articulos as art inner join categorias as cat on cat.id_categoria = art.id_categoria";
+
+        $result = mysqli_query($conexion, $sql);
+        ?>
+
         <div class="data-inicio">
             <div class="celular">
-                <div class="items">
-                    <img src="../archivos/20211021214122kisspng-samsung-galaxy-j2-prime-android-telephone-samsung-j2-prime-5ad80bf0cb5d14.548586101524108272833.png" alt="" class="img-celular">
-                    <div class="datos-celular">
-                        Lorem ipsum dolor sit amet consectetur adipisici Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi consectetur repudiandae modi quo officiis blanditiis neque, quas reiciendis vero, itaque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferque qui, nesciunt perferendis eaque nemo praesentium possimus quae architecto impedit! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate eos nihil reprehenderit eveniet facere accusamus iste sit fuga natus quia. Alias tempora non et soluta, eum unde repudiandae aliquid quo? ng elit. Quibusdam fugit ea sed aut quasi pariatur quisquam, qui quos itaque. Aliquid quis et in voluptate dignissimos quisquam fuga, vitae quia iste?
-                    </div>
-                </div>
+                <?php
+                while ($ver = mysqli_fetch_row($result)) :
+                ?>
+                    <div class="items">
+                        <img alt="" class="img-celular" src="<?php
+                                                                $imgVer = explode("/", $ver[7]);
+                                                                $imgruta = $imgVer[1] . "/" . $imgVer[2] . "/" . $imgVer[3];
+                                                                echo $imgruta;
+                                                                ?>">
+                        <div class="datos-celular w-100">
+                            <div class="titulo-cel w-100">
+                                <?php echo $ver[3] ?>
+                            </div>
+                            <div class="descripcion-cel w-100">
+                                <?php echo $ver[4] ?>
+                            </div>
+                            <div class="mas-datos w-100">
+                                <div class="precio-cat-cel w-100">
+                                    PRECIO:  S/<strong><span><?php echo $ver[6] ?></span></strong>
+                                </div>
+                                <div class="precio-cat-cel w-100">
+                                    CATEGORIA: <strong><span><?php echo $ver[2] ?></span></strong>
+                                </div>
+                                <div class="stock-cel w-100">
+                                    DISPONIBLE: <span id="<?php if ($ver[5] > 0) {
+                                                                echo 'stock_lleno';
+                                                            } else {
+                                                                echo 'stock_vacio';
+                                                            } ?>"><strong><?php echo $ver[5] ?></strong> unidades.</span>
+                                </div>
+                            </div>
 
+                        </div>
+                    </div>
+                <?php endwhile; ?>
             </div>
         </div>
 

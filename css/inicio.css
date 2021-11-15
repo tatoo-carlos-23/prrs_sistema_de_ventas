@@ -38,7 +38,6 @@
 .img-celular {
   width: 40% !important;
   padding: 10px 0;
-
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
   border-left: 15px solid #d9d9d9;
@@ -48,12 +47,84 @@
 
 .datos-celular {
   width: 60% !important;
-  background-color: #d9d9d9;
-  padding: 10px 0;
+  background-color: #ffff;
   height: 300px;
-  overflow-y: scroll;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
   color: #000 !important;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
 }
- 
+::-webkit-scrollbar {
+  display: none;
+}
+
+.titulo-cel {
+  height: 70px;
+  background-color: #141414;
+  color: #ffff !important;
+  overflow-y: scroll;
+  border-top-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px !important;
+  font-size: 14;
+}
+
+.descripcion-cel {
+  font-size: 12px;
+  text-align: justify !important;
+  height: 130px;
+  overflow-y: scroll;
+  padding: 5px;
+}
+
+.mas-datos {
+  height: 99px;
+  padding: 10px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.precio-cat-cel {
+  padding: 5px 2px;
+  padding-left: 5px !important;
+  font-size: 10px;
+}
+
+.precio-cat-cel >strong> span {
+  padding: 5px;
+  margin: 0 5px;
+  border-radius: 5px;
+  border: 1px solid #002766 !important;
+  background-color: #e6f7ff !important;
+  color: #002766 !important;
+}
+
+.stock-cel {
+  text-align: right;
+  font-size: 12px;
+  border-bottom-right-radius: 15px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.stock-cel > span {
+  border-bottom-right-radius: 15px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+#stock_vacio {
+  color: #f5222d !important;
+}
+
+#stock_lleno {
+  color: #389e0d !important;
+}
