@@ -1,0 +1,19 @@
+1. bd: Esta carpeta contenie los snipets o querys de la BD, listos para ejecutar.
+
+2. clases: Esta carpeta contiene todas las clases de cada modulo, con sus respectivos metodos de CRUD.
+
+3. css: contiene las hojas de estilo que serviran para dar estilo personalizados en cada caso de ser util.
+
+4. img: contiene todas las imagenes que necesitamos agregar en nuestras vistas.
+
+5. archivos: Esta carpeta contiene todas las imagenes de los productos agregados.
+
+6. js: Esta carpeta contiene todos los scripts js para cada modulo, para ejecutar las funciones de CRUD.
+
+7. librerias: Esta carpeta contendra librerias para la creacion de PDF, jquery, alertify, bootstrap y 
+              select 2. 
+
+8. procesos: Esta carpeta contiene archivos intermedios entre las clases y las vistas, estos mandaran
+                  informacion entre una y otra cosa.
+            
+9. vistas: Esta carpeta contendra todos los vistas de cada uno de los modulo,

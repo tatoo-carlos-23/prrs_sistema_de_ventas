@@ -1,0 +1,255 @@
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+
+.venta {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.titulo {
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid #096dd9;
+  margin-bottom: 2px;
+}
+
+.titulo > h3 {
+  color: #096dd9;
+  font-weight: bold;
+}
+
+.fila {
+  display: flex;
+  flex-direction: row;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+}
+
+.datos {
+  padding: 10px 15px;
+  width: 35%;
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.datos > div:nth-child(1) {
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  margin-bottom: 4px;
+}
+
+.datos > div:nth-child(2) {
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  margin-top: 4px;
+}
+
+.datos > div:nth-child(3) {
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  margin-top: 4px;
+}
+
+.items-venta {
+  padding: 10px 15px;
+  width: 65%;
+  height: 500px;
+  overflow-y: scroll;
+  /* border-left: 2px solid #096dd9; */
+}
+
+.table-venta {
+  height: 430px;
+  overflow-y: scroll;
+}
+
+.thead-dark {
+  color: #ffff;
+  font-weight: bold;
+  background-color: #096dd9;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.none {
+  border: none;
+  outline: none;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.p-05 {
+  padding: 5px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.m-05 {
+  margin: 5px;
+}
+
+/* AGREGAR CANTIDAD */
+
+.agregar {
+  border-bottom: 2px solid #096dd9 !important;
+  color: #096dd9 !important;
+  background-color: #fafafa !important;
+}
+
+/* BTN AGREGAR PRODUCTO*/
+.btn-agregar-producto {
+  background-color: #096dd9 !important;
+  cursor: pointer;
+}
+
+.btn-agregar-producto > span {
+  color: #ffff !important;
+  cursor: pointer;
+}
+
+.btn-agregar-producto > input {
+  color: #ffff !important;
+  border-bottom: 2px solid #096dd9 !important;
+  background-color: #096dd9 !important;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* CLASE INPUT BUSCAR */
+.input-buscar {
+  border-bottom: 2px solid #096dd9;
+  margin: 5px 0;
+  font-size: 16px;
+  padding: 6px 10px;
+  color: #096dd9;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.input-buscar::placeholder {
+  color: #096dd9;
+}
+
+#buscador_cliente,
+#buscador_producto {
+  text-align: center;
+}
+
+/* CLASE INPUT RESULTADOS*/
+.div-input-venta {
+  padding: 6px 10px 0 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+}
+
+.div-input-venta > span {
+  color: #096dd9;
+  padding-left: 2px;
+  font-size: 12px;
+}
+
+.div-input-venta > input {
+  border-bottom: 2px solid #bfbfbf;
+  background-color: #f0f0f0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 2px;
+}
+
+/* CLASE TEXT AREA DESCRIPCIO*/
+.descripcion-ta {
+  padding: 6px 10px 0 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+}
+
+.stk-precio {
+  margin: 5px 0;
+}
+
+.stk-precio > div:nth-child(1) {
+  margin-right: 2px;
+}
+
+.stk-precio > div:nth-child(2) {
+  margin-left: 2px;
+}
+
+/* IMAGEN PRODUCTO DE BUSQUEDA */
+.div-img-producto {
+  position: fixed;
+  top: 32%;
+  right: 23%;
+  /* background-color: yellowgreen; */
+  padding: 10px;
+  text-align: center;
+  width: 400px;
+  height: 400px;
+  /* border: 1px solid orange; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-producto {
+  max-width: 100%;
+  height: 100%;
+}
+
+.btn-registrar-nueva-venta {
+  text-align: center;
+  border: 2px solid #096dd9;
+  margin: 5px 0;
+  font-size: 16px;
+  padding: 6px 10px;
+  color: #096dd9;
+  background-color: #fafafa;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 220px;
+}
+
+.btn-registrar-nueva-venta:hover {
+  border: 2px solid #096dd9;
+  font-size: 18px;
+  color: #fafafa;
+  background-color: #096dd9;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.anular-venta {
+  float: left;
+  cursor: pointer;
+  color: #ffff;
+  background-color: #f5222d;
+  border-radius: 5px;
+  padding: 5px 5px;
+}
+
+/* #tbl_detalle_venta_productos > tr > td:nth-child(6) {
+  background-color: #e6f7ff;
+}
+
+#tbl_detalle_venta_productos > tr > td:nth-child(7) {
+  background-color: #fff1f0;
+  text-align: center;
+} */
+
+.eliminar-item-v:hover {
+  background-color: #f5222d !important;
+  color: #ffff  !important;
+  font-weight: bold  !important;
+}

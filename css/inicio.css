@@ -1,0 +1,59 @@
+.w-100 {
+  width: 100%;
+}
+
+.data-inicio {
+  height: 700px;
+  overflow-y: scroll;
+  width: 100%;
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+}
+
+.celular {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-gap: 10px;
+  height: auto;
+  border-radius: 0.25rem !important;
+}
+
+.celular > div {
+  justify-content: center;
+  margin: 2%;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  border-radius: 15px;
+}
+
+.img-celular {
+  width: 40% !important;
+  padding: 10px 0;
+
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  border-left: 15px solid #d9d9d9;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.datos-celular {
+  width: 60% !important;
+  background-color: #d9d9d9;
+  padding: 10px 0;
+  height: 300px;
+  overflow-y: scroll;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  color: #000 !important;
+}
+ 
